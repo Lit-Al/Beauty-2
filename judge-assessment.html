@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/normilize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link href="node_modules\lightbox2\dist\css/lightbox.min.css" rel="stylesheet" />
+  <link href="lightbox2\dist\css/lightbox.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
@@ -276,7 +276,7 @@
             </li>
         </ul>
         <p class="total-points">Сумма баллов: <span id="balls">0</span></p>
-        <button  class="total-points-button open-modal">Подтвердить</button>
+        <button type="button" class="total-points-button open-modal">Подтвердить</button>
     </form>
     </div>
     <div class="judge-modal visually-hidden">
@@ -313,10 +313,11 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="node_modules\lightbox2\dist\js/lightbox-plus-jquery.js"></script>
+  <script src="js/lightbox-plus-jquery.js"></script>
   <script src="js/judge-modal.js"></script>
   <script>
     lightbox.option({
+  'albumLabel': "%1 %2",
   'alwaysShowNavOnTouchDevices': true,
   'fadeDuration': 0,
   'imageFadeDuration': 0,

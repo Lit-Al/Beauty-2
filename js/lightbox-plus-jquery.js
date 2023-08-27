@@ -11102,13 +11102,21 @@ return jQuery;
     // on the page below.
     //
     // Github issue: https://github.com/lokesh/lightbox2/issues/663
-    $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/><div class="lb-nav"><a class="lb-prev" role="button" tabindex="0" aria-label="Previous image" href="" ></a><a class="lb-next" role="button" tabindex="0" aria-label="Next image" href="" ></a></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div><div class="dots-container"> <span class="dot active" onclick="currentSlide(0)"></span> <span class="dot" onclick="currentSlide(1)"></span> <span class="dot" onclick="currentSlide(2)"></span> <span class="dot" onclick="currentSlide(3)"></span> </div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span></span></div><div class="lb-closeContainer"><a class="lb-close" role="button" tabindex="0"></a></div></div></div></div>').appendTo($('body'));
+    $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/><div class="lb-nav"><a class="lb-prev" role="button" tabindex="0" aria-label="Previous image" href="" ></a><a class="lb-next" role="button" tabindex="0" aria-label="Next image" href="" ></a></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div><div class="dots-container"> <span class="dot visually-hidden"></span> <span class="dot visually-hidden"></span> <span class="dot visually-hidden"></span> <span class="dot visually-hidden"></span> </div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span></span></div><div class="lb-closeContainer"><a class="lb-close" role="button" tabindex="0"></a></div></div></div></div>').appendTo($('body'));
 
     let dots = document.getElementsByClassName('dot')
     Lightbox.prototype.imageCountLabel = function(currentImageNum, totalImages) {
-       let n = Number(this.options.albumLabel.replace(/%1/g, currentImageNum))
+       let n = this.options.albumLabel.replace(/%1/g, currentImageNum).slice(0,1)
+       let a = this.options.albumLabel.replace(/%1/g, currentImageNum).replace(/%2/g, totalImages).slice(2.-1);
+       let iter = 0;
        for (const i of dots) {
+        i.classList.add('visually-hidden')
+        if (iter < a) {
+          i.classList.remove('visually-hidden')
+        }
+
         i.classList.remove('dot--active')
+        iter++
        }
       dots[n - 1].className = dots[n - 1].className.replace(" dot--active", "");
       dots[n - 1].className += " dot--active";
@@ -11578,21 +11586,21 @@ return jQuery;
     }
   };
   let touchstartX = 0;
-let touchendX = 0;
+  let touchendX = 0;
 
-function handleGesture() {
-  if (touchendX < touchstartX) $(".lb-prev").trigger("click");
-  if (touchendX > touchstartX) $(".lb-next").trigger("click");
-}
+  function handleGesture() {
+    if (touchendX > touchstartX) $(".lb-prev").trigger("click");
+    if (touchendX < touchstartX) $(".lb-next").trigger("click");
+  }
 
-$(document).on("touchstart", ".lb-nav", e => {
-  touchstartX = e.changedTouches[0].screenX;
-});
+  $(document).on("touchstart", ".lb-nav", e => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
 
-$(document).on("touchend", ".lb-nav", e => {
-  touchendX = e.changedTouches[0].screenX;
-  handleGesture();
-});
+  $(document).on("touchend", ".lb-nav", e => {
+    touchendX = e.changedTouches[0].screenX;
+    handleGesture();
+  });
 
   return new Lightbox();
 }));
