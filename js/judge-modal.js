@@ -4,7 +4,6 @@ const form = document.querySelector('.evaluations-form');
 const blur = document.querySelector('.blur');
 
 const radio = document.querySelectorAll('.evulation-radio')
-const radioBlock = document.querySelectorAll('.evaluations-block')
 const balls = document.getElementById('balls')
 const ballsModal = document.getElementById('ballsModal')
 let numberBalls = 0;

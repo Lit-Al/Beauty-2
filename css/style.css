@@ -522,7 +522,7 @@ main {
 
 .close-judge-modal {
   background-color: transparent;
-  border: 0;
+  border: 0;er_list
   position: absolute;
   right: 6px;
   top: 8px;
@@ -538,6 +538,7 @@ main {
 }
 
 .assessment__before-after_list {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,7 +587,7 @@ main {
 
 .assessment__title {
   margin-top: 60px;
-  margin-bottom: 21px;
+  margin-bottom: 10px;
   color: #282828;
   font-size: 24px;
   font-weight: 800;
@@ -830,11 +831,9 @@ main {
 
 .judge-list {
   list-style: none;
-  margin-top: -20px;
-  margin-left: 150px;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  margin: 8px 0 0 165px;
+  padding: 0;
+  writing-mode: vertical-lr;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -846,6 +845,7 @@ main {
   color: #282828;
   font-size: 14px;
   font-weight: 400;
+
 }
 
 /* CHECKMARK */
@@ -955,9 +955,7 @@ main {
   }
 }
 
-.lightbox {
-padding-top: 240px;
-}
+
 
 .dots-container {
   position: relative;
