@@ -27,13 +27,13 @@
                     <span>ДО</span>
                     <div>
                         <label class="upload-photo-input">
-                            <input type="file">
-                            <img src="img/unknown-logo-big.png">
+                            <input id="photo_1" type="file" accept="image/jpg, image/jpeg, image/png, image/svg">
+                            <img id="image_1" src="img/unknown-logo-big.png">
                             <span>лицо</span>
                         </label>
                         <label class="upload-photo-input">
-                            <input type="file">
-                            <img src="img/unknown-logo-big.png">
+                            <input id="photo_2" type="file" accept="image/jpg, image/jpeg, image/png, image/svg">
+                            <img id="image_2" src="img/unknown-logo-big.png">
                             <span>брови</span>
                         </label>
                     </div>
@@ -42,27 +42,25 @@
                     <span>ПОСЛЕ</span>
                     <div>
                         <label class="upload-photo-input">
-                            <input type="file">
-                            <img src="img/unknown-logo-big.png">
+                            <input id="photo_3" type="file" accept="image/jpg, image/jpeg, image/png, image/svg">
+                            <img id="image_3" src="img/unknown-logo-big.png">
                             <span>лицо</span>
                         </label>
                         <label class="upload-photo-input">
-                            <input type="file">
-                            <img src="img/unknown-logo-big.png">
+                            <input id="photo_4" type="file" accept="image/jpg, image/jpeg, image/png, image/svg">
+                            <img id="image_4" src="img/unknown-logo-big.png">
                             <span>брови</span>
                         </label>
                     </div>
                 </li>
             </ul>
-            <a href="master-page.html" class="total-points-button upload-photo-button">Подтвердить</a>
+            <button disabled href="{% url 'master_page' %}" class="total-points-button upload-photo-button">Подтвердить</button>
         </form>
         
     </div>
   </main>
-
-
-
-
+    <script src="js/inputFileDetermine.js"></script>
+    <script src="js/uploadPhotoPreview.js"></script>
 </body>
 
 </html>

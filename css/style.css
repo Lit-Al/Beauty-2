@@ -71,6 +71,14 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+ background-color: #959595;
+}
+
+button:disabled:active {
+  transform: scale(1);  
+}
+
 body {
   font-family: 'SF Pro Display', sans-serif;
   margin: 0 auto; 
@@ -80,7 +88,7 @@ body {
 }
 
 .container {
-  padding: 0 15px;
+  padding: 0 15px;  
   max-width: 395px;
   margin: 0 auto; 
   display: -webkit-box; 
@@ -373,7 +381,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 395px;
   max-height: 285px;
   overflow-y: scroll;
   margin-bottom: 25px;
