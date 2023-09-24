@@ -24,7 +24,7 @@ modalBtn.addEventListener('click', function() {
   let checkRadio = [];
   for (const i of radio) {
     i.addEventListener('click', () => {
-      i.closest('div').style.outline = "none";
+      i.closest('div').style.borderColor = "rgba(102, 102, 102, 0.25)";
     })
     if (i.checked) {
       checkRadio.push(i)
@@ -38,7 +38,8 @@ modalBtn.addEventListener('click', function() {
     console.log(radioNames);
     for (const i of radio) {
       if (radioNames.includes(i.name)) {
-        i.closest('div').style.outline = "1px solid red";      
+        i.closest('div').style.borderColor = "red";      
+        i.closest('div').style.borderRadius = "5px";  
       }
     }
     if (radioNames.length === 0) {

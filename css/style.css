@@ -1075,13 +1075,9 @@ max-height:217px;
   text-align: center;
   z-index: 100;
   padding-top: 260px;
-  background:  url(/img/stripes.svg) top center no-repeat, 
+  background:  url(../img/stripes.svg) top center no-repeat, 
   radial-gradient(56.14% 58.22% at 55.54% 25.42%, #FF55A0 0%,#FFE8DF 50.65%) top center/2000px 2000px no-repeat;
-}
-
-.checkMark div{
   height: 100vh;
-  
 }
 
 .checkmark__circle {
