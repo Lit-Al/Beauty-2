@@ -597,10 +597,9 @@ max-height:217px;
   width: 269px;
   min-height: 276px;
   border-radius: 11px;
-  border: 1px solid #FD76B4;
-  opacity: 0.8;
-  background: url(<path-to-image>), lightgray 0% 0% / 100px 100px repeat, linear-gradient(136deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%);
-  backdrop-filter: blur(8px);
+  border: 1px solid #fd76b53d;
+  backdrop-filter: blur(2px);
+  background-color: rgba(245, 245, 245, 0.3);
   position: absolute;
   top: 280px;
   margin-left: auto;
@@ -620,6 +619,10 @@ max-height:217px;
       -ms-flex-align: center;
           align-items: center;
   padding: 15px 0 15px;
+}
+
+.judge-modal a{
+  opacity: 1;
 }
 
 .judge-modal .total-points {
