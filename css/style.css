@@ -2,21 +2,24 @@
   font-family: "SF Pro Display";
   font-weight: 400;
   src:
-    url("../fonts/SF-Pro-Display-Regular.otf") format("otf"),
+    url("/fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("/fonts/SFProDisplay-Regular.woff") format("woff")
 }
 
 @font-face {
   font-family: "SF Pro Display";
   font-weight: 500;
   src:
-    url("../fonts/SF-Pro-Display-Medium.otf") format("otf"),
+    url("/fonts/SFProDisplay-Medium.woff2") format("woff2"),
+    url("/fonts/SFProDisplay-Medium.woff") format("woff")
 }
 
 @font-face {
   font-family: "SF Pro Display";
   font-weight: 800;
   src:
-    url("../fonts/SF-Pro-Display-Heavy.otf") format("otf"),
+    url("/fonts/SFProDisplay-Heavy.woff2") format("woff2"),
+    url("/fonts/SFProDisplay-Heavy.woff") format("woff2")
 }
 
 *,
@@ -27,7 +30,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body {
+/* html, body {
+  height: 100%;
+} */
+
+html {
   height: 100%;
 }
 
@@ -68,7 +75,7 @@ h1,h2,h3,h4,h5,h6,p,ul {
 }
 
 button, input {
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
 }
 
 button {
@@ -84,11 +91,10 @@ button:disabled:active {
 }
 
 body {
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
   margin: 0 auto; 
   padding: 0;
   min-width: 375px;
-
   position: relative;
 }
 
@@ -96,7 +102,7 @@ body {
 .first-page-body {
   /* background: radial-gradient(56.14% 58.22% at 75.54% 22.42%, #FF55A0 0%, #FFE8DF 57.99%, #FAFAFA 91.5%) top center/2000px 2000px no-repeat,
   #FFE8DF top center/100% 100% no-repeat;  */
-  background: linear-gradient(180deg, #FFFFEA 45.69%, #FF55A0 117.73%);
+  background: linear-gradient(180deg, #FFFFEA 45.69%, #FF55A0 117.73%) no-repeat;
 }
 
 .confirmation-body {
@@ -585,7 +591,7 @@ max-height:217px;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);  */
   background: rgba(243, 243, 243, 0.63);
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -746,6 +752,7 @@ max-height:217px;
   color:#282828;
   font-size: 14px;
   font-weight: 400;
+  max-width: 135px;
 }
 
 .evaluations-block {
