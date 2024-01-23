@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" style="height: auto;">
 
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normilize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Илья Флитлайн</title>
@@ -22,11 +23,15 @@
                     <span>ДО</span>
                     <div>
                         <figure>
-                            <img src="img/germiona.png">
+                            <a href="img/germiona.png" class="fancybox">
+                                <img src="img/germiona.png">
+                            </a>
                             <figcaption>лицо</figcaption>
                         </figure>
                         <figure>
-                            <img src="img/germiona.png">
+                            <a href="img/germiona.png" class="fancybox">
+                                <img src="img/germiona.png">
+                            </a>
                             <figcaption>брови</figcaption>
                         </figure>
                     </div>
@@ -35,11 +40,15 @@
                     <span>ПОСЛЕ</span>
                     <div>
                         <figure>
-                            <img src="img/germiona.png">
+                            <a href="img/germiona.png" class="fancybox">
+                                <img src="img/germiona.png">
+                            </a>
                             <figcaption>лицо</figcaption>
                         </figure>
                         <figure>
-                            <img src="img/germiona.png">
+                            <a href="img/germiona.png" class="fancybox">
+                                <img src="img/germiona.png">
+                            </a>
                             <figcaption>брови</figcaption>
                         </figure>
                     </div>
@@ -49,7 +58,8 @@
             <div class="evaluations-form">
                 <ul class="evaluation-grid">
                     <li class="evaluations-name-list">
-                        <p class="evaluations-name--referee">Равномерность Градиентного Прокраса </p>
+                        <p class="evaluations-name--referee">Равномерность формы формы формы формы формы формы формы
+                            формы формы формы Градиентного Прокраса </p>
                         <p class="evaluations-name--referee">Актуальность Плотности</p>
                         <p class="evaluations-name--referee">Гармония формы</p>
                         <p class="evaluations-name--referee">Равномерность Прокраса</p>
@@ -431,7 +441,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="judge-list" >
+                            <li class="judge-list">
                                 <div class="judge-item">
                                     Литвинова А.А.
                                 </div>
@@ -461,9 +471,23 @@
         </div>
     </main>
 
-
-
-<script src="js/evaluationsSize.js"></script>
+    <script src="js/evaluationsSize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                buttons: [
+                    "close"
+                ],
+                touch: {
+                    vertical: true,
+                    momentum: false
+                }
+            });
+        });
+    </script>
+    <script src="js/judgeScript.js"></script>
 </body>
 
 </html>
